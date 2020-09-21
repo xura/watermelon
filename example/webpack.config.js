@@ -24,7 +24,17 @@ module.exports = {
             '@babel/env',
             '@babel/typescript',
           ],
-          plugins: ['@babel/proposal-class-properties'],
+          plugins: [
+            ["@babel/plugin-proposal-decorators", { "legacy": true }],
+            ["@babel/plugin-proposal-class-properties", { "loose": true }],
+            [
+              "@babel/plugin-transform-runtime",
+              {
+                "helpers": true,
+                "regenerator": true
+              }
+            ]
+          ],
         },
       },
       exclude: /node_modules/,
@@ -39,7 +49,7 @@ module.exports = {
       inject: true,
       template: './index.html',
     }),
-    new ForkTsCheckerWebpackPlugin()
+    // new ForkTsCheckerWebpackPlugin()
   ],
 
   devServer: {

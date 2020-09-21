@@ -1,5 +1,15 @@
-export const sum = (a: number, b: number) => {
-  console.log('wdwwd')
-  return a + b;
-};
-console.log('2f323f23f')
+import * as wm from '@nozbe/watermelondb'
+debugger;
+export default wm.appSchema({
+  version: 1,
+  tables: [
+    // tableSchemas go here...
+  ]
+})
+
+const add = () => {
+  console.log(
+    ''
+  )
+}
+export { add }
