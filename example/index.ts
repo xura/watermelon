@@ -1,2 +1,2 @@
 import * as blah from '../src/index'
-blah.sum()
+blah.sum(3, 4)
