@@ -4,11 +4,12 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
   entry: path.resolve(__dirname, 'index.ts'),
-
+  devtool: "source-map",
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  node: { fs: 'empty' },
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
